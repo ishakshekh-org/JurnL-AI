@@ -61,7 +61,7 @@ export default function Home() {
 function AuthShowcase() {
   const { data: sessionData } = useSession();
 
-  const { data: secretMessage } = api.post.getSecretMessage.useQuery(
+  const { data: secretMessage } = api.example.getSecretMessage.useQuery(
     undefined, // no input
     { enabled: sessionData?.user !== undefined },
   );
